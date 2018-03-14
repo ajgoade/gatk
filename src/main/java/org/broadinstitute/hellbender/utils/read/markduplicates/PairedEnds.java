@@ -105,9 +105,9 @@ public class PairedEnds implements OpticalDuplicateFinder.PhysicalLocation {
     final GATKRead read2;
     if (incomplete.first.isFirstOfPair()){
       read1 = incomplete.first;
-      read2 = second;
+      read2 = incomplete.second;
     } else {
-      read1 = second;
+      read1 = incomplete.second;
       read2 = incomplete.first;
     }
 
