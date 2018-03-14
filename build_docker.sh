@@ -3,7 +3,8 @@
 # Have script stop if there is an error
 set -e
 
-REPO=broadinstitute
+#REPO=broadinstitute
+REPO=ajgoade
 PROJECT=gatk
 REPO_PRJ=${REPO}/${PROJECT}
 GCR_REPO="us.gcr.io/broad-gatk/gatk"
