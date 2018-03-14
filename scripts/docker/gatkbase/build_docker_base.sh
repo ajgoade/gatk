@@ -4,7 +4,7 @@
 set -e
 
 
-REPO=broadinstitute
+REPO=ajgoade
 PROJECT=gatk
 VERSION=1.2.3
 FULL_PATH=${REPO}/${PROJECT}:gatkbase-${VERSION}

@@ -1,5 +1,6 @@
 # Using OpenJDK 8
-FROM broadinstitute/gatk:gatkbase-1.2.3
+#FROM broadinstitute/gatk:gatkbase-1.2.3
+FROM ajgoade/gatk:gatkbase-1.2.3
 ARG DRELEASE
 
 ADD . /gatk

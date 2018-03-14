@@ -1,6 +1,7 @@
 # Using OpenJDK 8
 # This Dockerfile does not require any files that are in the GATK4 repo.
-FROM ubuntu:16.04
+#FROM ubuntu:16.04
+FROM maprtech/data-science-refinery:v1.1_6.0.0_4.1.0_ubuntu16
 
 #### Basic image utilities
 RUN apt-get update && \
@@ -22,17 +23,18 @@ RUN apt-get install -y \
  samtools \
  software-properties-common
 
+##  Commented out Google Cloud Support - ajgoade  20180314
 #### Specific for google cloud support
-RUN wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.zip \
-    && unzip google-cloud-sdk.zip \
-    && rm google-cloud-sdk.zip
+#RUN wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.zip \
+#    && unzip google-cloud-sdk.zip \
+#    && rm google-cloud-sdk.zip
 
-RUN google-cloud-sdk/install.sh --usage-reporting=true --path-update=true --bash-completion=true --rc-path=/.bashrc --disable-installation-options
-VOLUME ["/root/.config"]
-ENV PATH /google-cloud-sdk/bin:$PATH
+#RUN google-cloud-sdk/install.sh --usage-reporting=true --path-update=true --bash-completion=true --rc-path=/.bashrc --disable-installation-options
+#VOLUME ["/root/.config"]
+#ENV PATH /google-cloud-sdk/bin:$PATH
 
-RUN yes | gcloud components update
-RUN yes | gcloud components update preview
+#RUN yes | gcloud components update
+#RUN yes | gcloud components update preview
 ###########
 
 # Get OpenJDK8 on here.
