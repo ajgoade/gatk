@@ -3,7 +3,6 @@
 # Have script stop if there is an error
 set -e
 
-#REPO=broadinstitute
 REPO=ajgoade
 PROJECT=gatk
 REPO_PRJ=${REPO}/${PROJECT}
